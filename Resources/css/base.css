@@ -9,7 +9,7 @@ body {
 
 /* ===== HEADER & NAV ===== */
 header {
-  background: #000c20;
+  background: #0C0828;
   color: #fff;
   padding: 1rem 2rem;
 }
@@ -42,7 +42,7 @@ nav {
 nav a {
   padding: 0.5rem 1rem;
   border-radius: 6px;
-  background: rgb(0, 0, 56);
+  background: #0C0828;
   color: #cacaca;
   text-decoration: none;
   font-weight: 600;
@@ -61,7 +61,7 @@ nav a:hover {
 .menu-toggle {
   display: none;
   background: #ffffff;
-  color: #0a1f44;
+  color: #0C0828;
   border: none;
   padding: 0.5rem 0.75rem;
   border-radius: 6px;
@@ -84,11 +84,16 @@ nav a:hover {
 }
 
 footer {
-  background: rgb(0, 0, 56);
+  background: #0C0828;
   color: #ffffff;
-  padding: 2rem;
+  /* padding: 2rem; */
   text-align: center;
   margin-top: auto;
+  /* height: 75px; */
+}
+
+footer a{
+    color: gray;
 }
 
 /* ===== RESPONSIVE ===== */
@@ -96,18 +101,20 @@ footer {
   nav {
     display: none;
     flex-direction: column;
-    background: rgb(0, 0, 88);
+    background: #0C0828;
     position: absolute;
     top: 80px;
     right: 2rem;
-    padding: 1rem;
-    border-radius: 10px;
+    margin:0;
+    padding: 0.1rem 1rem;
+    border-radius: 5px;
   }
 
   nav a {
-    background: #818181;
-    margin-bottom: 0.5rem;
-    width: 100%;
+    background: #0C0828;
+    /* margin-bottom: 0.5rem; */
+    /* padding: 0; */
+    width: 95%;
     text-align: center;
   }
 
@@ -117,5 +124,71 @@ footer {
 
   .menu-toggle {
     display: block;
+  }
+}
+
+
+
+
+.site-footer {
+  background: #0C0828;
+  color: #ffffff;
+  padding: 0.5rem;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.footer-left {
+  /* display: flex; */
+  align-items: flex-start;
+  gap: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.footer-left img {
+  height: 110px;
+  width: auto;
+}
+
+.footer-right a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 1rem;
+}
+
+.footer-right a:hover {
+  text-decoration: underline;
+  color: skyblue;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-left {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .footer-left img {
+  justify-content: center !important;
+  justify-self: center;
+  }
+
+  .footer-right a {
+    margin: 0 0.5rem;
   }
 }
