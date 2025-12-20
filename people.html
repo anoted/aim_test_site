@@ -36,22 +36,130 @@ function toggleMenu() {
       <a href="contact.html">Contact</a>
     </nav>
   </div>
+
+  <style>
+  .people-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+  }
+
+  .person-card {
+    text-align: center;
+  }
+
+  .person-card a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .person-photo {
+    width: 100%;
+    max-width: 180px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #1f2933;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .person-photo:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  }
+
+  .person-name {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #111827;
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .people-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 500px) {
+    .people-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+
 </header>
 <section class="section">
 <div class="cards">
-<div class="card" style="text-align:center;">
-<img src="faculty.jpg" class="profile" alt="Faculty">
-<h3>Dr. Jane Doe</h3>
-<p>Director - AI & IoT Systems</p>
-<a href="#">Google Scholar</a>
-</div>
-<div class="card" style="text-align:center;">
-<img src="student.jpg" class="profile" alt="Student">
-<h3>John Smith</h3>
-<p>PhD Student - Multimedia AI</p>
-</div>
+<!--  -->
+<section>
+  <h2>Faculties</h2>
+
+  <div class="people-grid">
+    <div class="person-card">
+      <a href="faculty-profile-1.html">
+        <img src="faculty1.jpg" alt="Faculty Name" class="person-photo">
+        <div class="person-name">Dr. Faculty Name</div>
+      </a>
+    </div>
+
+    <div class="person-card">
+      <a href="faculty-profile-2.html">
+        <img src="faculty2.jpg" alt="Faculty Name" class="person-photo">
+        <div class="person-name">Dr. Faculty Name</div>
+      </a>
+    </div>
+
+    <div class="person-card">
+      <a href="faculty-profile-3.html">
+        <img src="faculty3.jpg" alt="Faculty Name" class="person-photo">
+        <div class="person-name">Dr. Faculty Name</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!--  -->
+<!--  -->
+<section>
+  <h2>Students</h2>
+
+  <div class="people-grid">
+    <div class="person-card">
+      <a href="student-profile-1.html">
+        <img src="student1.jpg" alt="Student Name" class="person-photo">
+        <div class="person-name">Student Name</div>
+      </a>
+    </div>
+
+    <div class="person-card">
+      <a href="student-profile-2.html">
+        <img src="student2.jpg" alt="Student Name" class="person-photo">
+        <div class="person-name">Student Name</div>
+      </a>
+    </div>
+
+    <div class="person-card">
+      <a href="student-profile-3.html">
+        <img src="student3.jpg" alt="Student Name" class="person-photo">
+        <div class="person-name">Student Name</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+    
+
+
 </div>
 </section>
+
+
+
+
 <footer class="site-footer">
   <div class="footer-inner">
 

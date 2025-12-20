@@ -11,6 +11,60 @@ function toggleMenu() {
 }
 </script>
 
+<style>
+  .facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 30px;
+  }
+
+  .facility-card {
+    text-align: center;
+  }
+
+  .facility-card a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .facility-photo {
+    width: 100%;
+    max-width: 250px; /* bigger frames */
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #1f2933;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .facility-photo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  }
+
+  .facility-name {
+    margin-top: 12px;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #111827;
+  }
+
+  /* Responsive */
+  @media (max-width: 1000px) {
+    .facilities-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .facilities-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+
 </head>
 
 <body>
@@ -37,13 +91,74 @@ function toggleMenu() {
     </nav>
   </div>
 </header>
-<section class="section gallery">
-<div class="cards">
-<div class="card"><img src="gpu.jpg" alt="NVIDIA GPUs"><p>NVIDIA GPU Cluster</p></div>
-<div class="card"><img src="iot.jpg" alt="IoT Testbed"><p>IoT Testbeds</p></div>
-<div class="card"><img src="cadence.jpg" alt="Cadence Tools"><p>Cadence Design Stations</p></div>
-</div>
+
+
+
+
+
+<section>
+  <h2>Facilities</h2>
+
+  <div class="facilities-grid">
+
+    <div class="facility-card">
+      <a href="nvidia-a100.html">
+        <img src="nvidia-a100.jpg" alt="Nvidia A100 GPU cluster" class="facility-photo">
+        <div class="facility-name">Nvidia A100 GPU Cluster</div>
+      </a>
+    </div>
+
+    <div class="facility-card">
+      <a href="nvidia-a4000.html">
+        <img src="nvidia-a4000.jpg" alt="Nvidia A4000 GPU workstations" class="facility-photo">
+        <div class="facility-name">Nvidia A4000 GPU Workstations</div>
+      </a>
+    </div>
+
+    <div class="facility-card">
+      <a href="nvidia-a6000.html">
+        <img src="nvidia-a6000.jpg" alt="Nvidia A6000 workstations" class="facility-photo">
+        <div class="facility-name">Nvidia A6000 Workstations</div>
+      </a>
+    </div>
+
+    <div class="facility-card">
+      <a href="unitree-g1.html">
+        <img src="unitree-g1.jpg" alt="Unitree G1 Humanoid Robot" class="facility-photo">
+        <div class="facility-name">Unitree G1 Humanoid Robot</div>
+      </a>
+    </div>
+
+    <div class="facility-card">
+      <a href="jetson-nano.html">
+        <img src="jetson-nano.jpg" alt="Nvidia Jetson Nano Robot Car" class="facility-photo">
+        <div class="facility-name">Nvidia Jetson Nano Robot Car</div>
+      </a>
+    </div>
+
+    <div class="facility-card">
+      <a href="3d-printer.html">
+        <img src="3d-printer.jpg" alt="3D Printer" class="facility-photo">
+        <div class="facility-name">3D Printer</div>
+      </a>
+    </div>
+
+    <div class="facility-card">
+      <a href="sdr-hardware.html">
+        <img src="sdr.jpg" alt="Software Defined Radio Hardware" class="facility-photo">
+        <div class="facility-name">Software Defined Radio Hardware</div>
+      </a>
+    </div>
+
+
+
+  </div>
 </section>
+
+
+
+
+
 <footer class="site-footer">
   <div class="footer-inner">
 
